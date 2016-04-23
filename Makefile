@@ -1,0 +1,6 @@
+
+
+all: ; \
+    gcc hellotravis.c
+
+
