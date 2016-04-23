@@ -1,0 +1,17 @@
+
+language: c
+compiler:
+    - gcc
+
+install: true
+
+script: make
+
+
+
+
+
+
+
+
+
