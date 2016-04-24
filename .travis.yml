@@ -14,7 +14,10 @@ install:
     - sudo apt-get -qy install pkg-config
     - sudo apt-get -qy install wireshark-dev
 
-script: make
+script:
+    - echo $PKG_CONFIG_PATH
+    - echo `ls /usr/lib/x86_64-linux-gnu/pkgconfig/`
+    #- make
 
 
 
