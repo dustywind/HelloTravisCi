@@ -8,11 +8,11 @@ compiler:
 before_install:
     - sudo apt-get -qy update
     # wireshark.pc location: http://packages.ubuntu.com/tr/trusty/amd64/libwireshark-dev/filelist
-    - export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/usr/lib/x86_64-linux-gnu/pkgconfig/"
+    - export PKG_CONFIG_PATH="/usr/lib/x86_64-linux-gnu/pkgconfig/:${PKG_CONFIG_PATH}"
 
 install: 
     - sudo apt-get -qy install pkg-config
-    - sudo apt-get -qy install wireshark-dev
+    - sudo apt-get -qy install libwireshark-dev wireshark-dev
 
 script:
     - echo $PKG_CONFIG_PATH
