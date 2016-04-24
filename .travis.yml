@@ -10,6 +10,7 @@ before_install:
 
 install: 
     - sudo apt-get -qy install wireshark-dev
+    - sudo apt-get -qy install libwireshark-dev
 
 script: make
 

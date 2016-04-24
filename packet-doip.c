@@ -40,5 +40,3 @@ proto_reg_handoff_doip(void)
 }
 
 
-
-
