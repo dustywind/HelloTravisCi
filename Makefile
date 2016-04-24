@@ -12,10 +12,10 @@ hello: hellotravis.c ; \
 dissector: packet-doip.c ;  \
     gcc \
     -c -shared -fPIC \
-    -I/usr/include/wireshark  \
-    -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include \
+    `pkg-config --cflags wireshark` \
+    `pkg-config --cflags glib-2.0` \
     packet-doip.c
 
-    #`pkg-config --cflags wireshark` \
-    #`pkg-config --cflags glib-2.0` \
+    #-I/usr/include/wireshark  \
+    #-I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include \
 
