@@ -19,7 +19,7 @@ install:
     - cp -R ./plugins/doip ./wireshark/plugins/doip/ 
     - cp -R ./plugins/Custom.make ./wireshark/plugins/
     - cd ./wireshark && bash ./autogen.sh && cd ~-
-    - cd ./wireshark/plugins && cat Makefile.am | sed 's/gryphon/doip\ gryphon' > Makefile.am && cd ~-
+    - cd ./wireshark/plugins && cat Makefile.am | sed 's/gryphon/doip\ gryphon/' > Makefile.am && cd ~-
     - cd ./wireshark && ./configure --enable-wireshark=no && cd ~-
 
 script: 
