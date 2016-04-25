@@ -1,7 +1,7 @@
 
 .PHONY: all
 
-all: hello dissector
+all: hello 
 
 clean: ; \
     rm -f hello packet-doip.o

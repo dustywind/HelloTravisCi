@@ -23,6 +23,8 @@ install:
 
 script: 
     #- echo $PKG_CONFIG_PATH && echo `ls /usr/lib/x86_64-linux-gnu/pkgconfig/`
+    - pwd
+    - ls ./wireshark/plugins/doip
     - cd wireshark/plugins/doip && make && cd ~-
 
 
