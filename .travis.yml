@@ -19,12 +19,11 @@ install:
     - cp -R ./plugins/doip ./wireshark/plugins/doip/ 
     - cp -R ./plugins/Custom.make ./wireshark/plugins/
     - cd wireshark && bash ./autogen.sh && cd ~-
-    - cd wireshark ; ./configure --with-qt=no ; cd ~-
-    - cd wireshark ; make -C ./plugins ; cd ~-
+    - cd wireshark && ./configure --enable-wireshark=no && cd ~-
 
-script:
+script: false
     #- echo $PKG_CONFIG_PATH && echo `ls /usr/lib/x86_64-linux-gnu/pkgconfig/`
-    - make
+    - cd wireshark/plugins/doip && make && cd ~-
 
 
 
