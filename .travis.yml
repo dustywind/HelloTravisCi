@@ -22,10 +22,10 @@ install:
     - cd wireshark && ./configure --enable-wireshark=no && cd ~-
 
 script: 
-    #- echo $PKG_CONFIG_PATH && echo `ls /usr/lib/x86_64-linux-gnu/pkgconfig/`
     - pwd
+    - ls ./wireshark/plugins/
     - ls ./wireshark/plugins/doip
-    - cd wireshark/plugins/doip && make && cd ~-
+    - make -C ./wireshark/plugins/doip
 
 
 
