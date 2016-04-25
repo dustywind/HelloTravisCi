@@ -21,7 +21,7 @@ install:
     - cd wireshark && bash ./autogen.sh && cd ~-
     - cd wireshark && ./configure --enable-wireshark=no && cd ~-
 
-script: false
+script: 
     #- echo $PKG_CONFIG_PATH && echo `ls /usr/lib/x86_64-linux-gnu/pkgconfig/`
     - cd wireshark/plugins/doip && make && cd ~-
 
