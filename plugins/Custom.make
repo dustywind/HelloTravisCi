@@ -8,4 +8,4 @@ _CUSTOM_EXTRA_DIST_ = \
 	Custom.make
 
 _CUSTOM_plugin_ldadd_ = \
-	-dlopen plugins/doip/dop.la
+	-dlopen plugins/doip/doip.la
