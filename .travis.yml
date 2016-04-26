@@ -11,13 +11,12 @@ before_install:
     #somehow doesn't work: - export PKG_CONFIG_PATH="/usr/lib/x86_64-linux-gnu/pkgconfig/:${PKG_CONFIG_PATH}"
 
 install: 
-    - sudo apt-get -qy install pkg-config
     - sudo apt-get -qy install libwireshark-dev wireshark-dev
     - wget https://www.wireshark.org/download/src/wireshark-2.0.2.tar.bz2
     - tar xf wireshark-2.0.2.tar.bz2
     - mv wireshark-2.0.2 wireshark
     - cp -R ./plugins/doip ./wireshark/plugins/doip/ 
-    - cp -R ./plugins/Custom.make ./wireshark/plugins/
+    - cp -R ./plugins/Custom.* ./wireshark/plugins/
     - cd ./wireshark && bash ./autogen.sh && cd ~-
     - cd ./wireshark && ./configure --enable-wireshark=no && cd ~-
 
