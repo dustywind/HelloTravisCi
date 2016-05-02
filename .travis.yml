@@ -18,7 +18,7 @@ script:
     - docker build -t dustydust/hello-docker .
     - docker images
     - docker run dustydust/hello-docker
-    - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+    - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
     - docker push dustydust/hello-docker
 
 
