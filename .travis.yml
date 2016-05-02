@@ -16,6 +16,8 @@ before_install:
 script: 
     - make
     - docker build -t hello-docker .
+    - docker images
+    - docker run hello-docker
 
 
 
