@@ -15,9 +15,11 @@ before_install:
 
 script: 
     - make
-    - docker build -t hello-docker .
+    - docker build -t dustydust/hello-docker .
     - docker images
-    - docker run hello-docker
+    - docker run dustydust/hello-docker
+    - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+    - docker push dustydust/hello-docker
 
 
 
